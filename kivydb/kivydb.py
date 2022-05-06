@@ -55,13 +55,12 @@ class kivydb(App):
         self.gdl_medio = GridLayoutColor(rows=5)
 			#Widgets
         self.lbl_nick = Label(text="usuario")
-        self.txi_nick = TextInput(text="")
+        self.txi_nick = TextInput(text="", multiline=False)
         self.lbl_passwd = Label(text="contraseña")
-        self.txi_passwd = TextInput(text="")
+        self.txi_passwd = TextInput(text="", password=True, multiline=False)
         self.btn = Button(text="accesar")
 			#Modificaciones
         self.gdl_medio._update_color([1,0,0,1])
-        self.txi_passwd.password = True
         self.btn.bind(on_press=self.btn_press)
 			#Agregar
         self.gdl_medio.add_widget(self.lbl_nick)
@@ -81,8 +80,3 @@ if __name__ == '__main__':
     kdb.iniciarDB()
     #Ejecutar el entorno gráfico
     kdb.run()
-    """
-    Miapp = Acceso()
-    Miapp.iniciarDB()
-    Miapp.run()
-    """
