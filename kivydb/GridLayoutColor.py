@@ -4,7 +4,7 @@ from kivy.graphics import Color, Rectangle
 
 
 class GridLayoutColor(GridLayout):
-    background_color = ListProperty([1,0,0,1])
+    background_color = ListProperty([0.5,1,0.5,0.3])
     
     def __init__(self,**kwargs):
         super(GridLayoutColor, self).__init__(**kwargs)
